@@ -1,0 +1,11 @@
+### Running
+
+```
+node broadcast
+```
+
+### Environment Variables
+
+```
+BROADCAST_WEBSERVER_PORT		port to run the webserver on
+```
