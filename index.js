@@ -12,7 +12,6 @@ var webserver = new Webserver.Server(config.webserver);
 
 var websocket = new Websocket.Server(webserver.getHttp());
 
-webserver.loadRoutes('testSite');
 webserver.loadRoutes('publish', {
 	websocket: websocket
 });
