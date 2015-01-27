@@ -1,11 +1,20 @@
-### Running
+### Installation
 
 ```
-node broadcast
+npm install --global broadcast-server
 ```
 
 ### Environment Variables
 
 ```
 BROADCAST_WEBSERVER_PORT		port to run the webserver on
+```
+
+### Running
+
+```
+export BROADCAST_WEBSERVER_PORT=9000
+
+broadcast-server
+
 ```
