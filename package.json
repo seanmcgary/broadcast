@@ -1,6 +1,6 @@
 {
 	"name": "broadcast-server",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Broadcast messages to clients over websockets",
 	"main": "index.js",
 	"bin": {
