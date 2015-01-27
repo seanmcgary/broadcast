@@ -21,10 +21,22 @@ function Client(socket){
 		if(channel && channel.length){
 			socket.join(channel);
 			logger.success({
-				message: 'joined channel "' + channel + '"'
+				message: 'client joined channel',
+				data: { channel: channel }
 			});
 		}
 	});
+
+	this.socket.on('leave', function(data){
+		var channel = data.channel;
+		if(channel && channel.length){
+			socket.leave(channel);
+			logger.warn({
+				message: 'client left channel',
+				data: { channel: channel }
+			});
+		}
+	})
 };
 
 
@@ -50,7 +62,6 @@ Server.prototype.setupListeners = function(){
 	var self = this;
 
 	self.io.on('connection', function(socket){
-		console.log('connected');
 		new Client(socket);
 	});
 };
