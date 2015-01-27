@@ -1,5 +1,5 @@
 {
-	"name": "broadcast",
+	"name": "broadcast-server",
 	"version": "0.1.0",
 	"description": "Broadcast messages to clients over websockets",
 	"main": "index.js",
