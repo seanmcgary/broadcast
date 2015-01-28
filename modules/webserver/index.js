@@ -25,6 +25,10 @@ function Server(config){
 		logger: logger
 	}));
 
+	server.get('/', function(req, res){
+		res.send(200);
+	});
+
 	return self;
 };
 
